@@ -32894,7 +32894,7 @@ leastViewed = async (query, apiKey) => {
     // keep stepping until empty result
     let result = await search(query, apiKey);
     let i = 1;
-    let prevVideos;
+    let prevVideos = [];
     while (result.videos.length > 0) {
         prevVideos = result.videos;
         result = await search(query, apiKey, result.nextPageToken);
