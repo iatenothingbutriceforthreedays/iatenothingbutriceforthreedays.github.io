@@ -1,0 +1,42 @@
+<script src="dist/main.js"></script>
+<style>
+  .overlayImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+    mix-blend-mode: normal;
+  }
+  #cv {
+    height: 400px;
+    width: 400px;
+    background-blend-mode: soft-light;
+  }
+</style>
+<meta charset="UTF-8">
+
+
+<canvas id="cv" width="400" height="400">
+</canvas>
+
+<br>
+
+<input id='query' type="text">
+
+<input id='opacity' type="range" min="0.0" max="1.0" step="any" value="0.5">
+
+<select id='blend-mode'>
+  <option value="overlay">overlay </option>
+  <option value="darken">darken</option>
+  <option value="lighten">lighten</option>
+  <option value="hard-light">hard-light</option>
+  <option selected="true" value="soft-light">soft-light</option>
+  <option value="difference">difference</option>
+</select>
+
+<input id="lucky" type="button" value="!">
+<input id="factory" type="button" value="🏭">
+
+<div id='results'></div>
